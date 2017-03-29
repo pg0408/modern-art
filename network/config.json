@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "file": "",
+    "link": "",
+    "text": "Peter Gleeson"
+  },
+  "text": {
+    "more": "<h3>Key findings:</h3><br><br> - <b>Highest PageRank centrality</b> artists include: Picasso, Cezanne, Duchamp, Monet, van Gogh, Bellows, Gauguin and Cassatt<br> - <b>Highest in-degree </b> artists include: Picasso, Duchamp, Cezanne, van Gogh, Braque, Gauguin, Kandinsky, Johns, Pollock<br> - <b>Degree distribution</b> almost follows power-law (KS test p-value \u003e 0.9)<br> - <b>Assortativty</b> by year of birth is high (0.679), degree assortativity is low (-0.012)<br> - <b>Eight communities detected</b>, some correlation with \"Movement\" and year of birth<br> - Negative relationship between PageRank and year of birth (p \u003c\u003c\u003c 0.001; R^2 \u003d 0.198)<br><br><h3>Steps:</h3><br>1) Crawl Wikipedia to collect data from pages categorised as \"Modern Artists\" (Python)<br>2) Produce edge list based upon which pages link to one another (Python)<br>3) Generate network and calculate summary statistics/modularity (Gephi)<br>4) Analyse network structure and module membership (R)<br>5) Export to HTML/CSS/JavaScript with Sigma.js<br><br>Done!",
+    "intro": "Here\u0027s a visualisation of the network of Wikipedia pages categorised as \"Modern Artists\"!<br>Built with Python, R, Gephi and Sigma.js :)",
+    "title": "Modern Artists Graph"
+  },
+  "legend": {
+    "edgeLabel": "Linked via Wikipedia",
+    "colorLabel": "Community Membership",
+    "nodeLabel": "Artist"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": "Modularity Class",
+    "hoverBehavior": "dim"
+  },
+  "informationPanel": {
+    "groupByEdgeDirection": true,
+    "imageAttribute": false
+  },
+  "sigma": {
+    "drawingProperties": {
+      "defaultEdgeType": "curve",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd",
+      "activeFontStyle": "bold",
+      "defaultLabelColor": "#ccc",
+      "labelThreshold": 10,
+      "defaultLabelHoverColor": "#fff",
+      "fontStyle": "bold",
+      "hoverFontStyle": "bold",
+      "defaultLabelSize": 14
+    },
+    "graphProperties": {
+      "maxEdgeSize": 0.5,
+      "minEdgeSize": 0.2,
+      "minNodeSize": 1,
+      "maxNodeSize": 7
+    },
+    "mouseProperties": {
+      "maxRatio": 20,
+      "minRatio": 0.75
+    }
+  }
+}
